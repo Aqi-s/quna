@@ -1,0 +1,411 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	font-family: "microsoft yahei";
+	font-weight: 300;
+}
+a{
+	font-size: 14px;
+}
+
+.header{
+	display: flex;
+	width: 100%;
+}
+
+
+
+/* 相关按钮 */
+#guanbi,#dakai{
+	display: none;
+}
+
+
+
+.nav-d{
+	width: 25%;
+	height: 100vh;
+}
+.nav{
+	width: 25%;
+	height: 100vh;
+	position: fixed;
+	text-align: center;
+	overflow: scroll;
+	background-color: #e5e5e5;
+	overflow-x: hidden;
+	opacity: 0;
+	transition: all 1.5s;
+	}
+.nav h1{
+	margin-top: 20%;
+}
+.nav dl{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	display: flex;
+	justify-content: space-between;
+	flex-flow: column;
+	line-height: 450%;
+}
+.nav dl dd{
+	font-size: 100%;
+	font-weight: 350;
+	position: relative;
+	cursor: pointer;
+}
+.nav dl dd::after{
+	content: "";
+	width: 0%;
+	height: 1px;
+	background-color: red;
+	position: absolute;
+	left: 50%;
+	bottom: 20%;
+	transform: translate(-50%);
+	transition: 0.6s;
+}
+.main{
+	width: 75%;
+	height: auto;
+	/* background-color: pink; */
+}
+.main-1{
+	width: 100%;
+	height: 100vh;
+	background: url(../image/banner2.jpg)no-repeat;
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+	position: relative;
+	left: 0;
+	top: 0;
+}
+.main-1::after{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .4);
+	z-index: 0;
+}
+#text{
+	width: 80%;
+}
+
+.main-1 p{
+	color: #ffffff;
+	text-align: center;
+	font-size: 320%;
+	font-weight: 500;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 1;
+}
+#icon-mouse{
+	position: absolute;
+	left: 50%;
+	bottom: 10px;
+	transform: translate(-50%,0px);
+	z-index: 1;
+}
+.main-1 .icon-mouse::before{
+	position: absolute;
+	left: 50%;
+	bottom: 10px;
+	transform: translate(-50%,0px);
+	font-size: 40px;
+	color: #FFFFFF;
+	z-index: 0;
+	animation: name 2s linear infinite;
+	cursor: pointer;
+}
+@keyframes name{
+	0%{bottom: 5px;}
+	25%{bottom: 15px;}
+	50%{bottom: 25px;}
+	75%{bottom: 15px;}
+	100%{bottom: 5px;}
+}
+.main-2{
+	width: 100%;
+	height: 100vh;
+}
+.about{
+	width: 100%;
+	height: 99.8vh;
+	position: relative;
+	left: 0%;
+	top: 50%;
+	transform: translate(-0%,-50%);
+	border-bottom: #8B4513 1px solid;
+}
+.about-r{
+	width: 100%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+.headshot{
+	margin: auto;
+	width: 159px;
+	height: 177px;
+	/* border-radius: 50%; */
+	overflow: hidden;
+}
+.headshot img{
+	width: 100%;
+	/* transform: scale(3.8); */
+	transition: 0.6s;
+}
+/* .headshot img:hover{
+	transform: scale(3.2);
+} */
+.introduce{
+	margin: 0 auto;
+	margin-top: 4%;
+	width: 80%;
+	height: auto;
+}
+.introduce p{
+	font-size: 18px;
+	font-weight: 300;
+	letter-spacing: 1px;
+	line-height: 1.8em;
+}
+
+/* 技能 */
+.skill{
+	width: 100%;
+	height: 100vh;
+/* 	background: url(../image/banner2.jpg) no-repeat;
+	background-position: center; */
+	
+}
+.skill-wapr{
+	width: 90%;
+	height: 90vh;
+	box-shadow: 1px 1px 0 #dedede;
+	position: relative;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+.personal h1{
+	text-align: center;
+}
+
+.speed{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	height: 26.3vh;
+	background-color: #FFFFFF;
+	position: relative;
+	left: 50%;
+	top: 35%;
+	transform: translate(-50%,-35%);
+}
+.speed-r{
+	width: 48%;
+	height: 26.3vh;
+}
+.speed-r ul{
+	margin-bottom: 100px;
+	width: 100%;
+	height: 50px;
+}
+.speed ul h1{
+	float: left;
+	font-weight: 500;
+	font-size: 18px;
+}
+.speed ul p{
+	float: right;
+	font-weight: 500;
+	font-size: 18px;
+}
+.jindu1,.jindu2,.jindu3,.jindu4,.jindu5,.jindu6{
+	float: left;
+	width: 100%;
+	height: 5px;
+	background-color: #e6e6e6;
+}
+.jindu-1,.jindu-2,.jindu-3,.jindu-4,.jindu-5,.jindu-6{
+	transition: 1.5s;
+}
+.jindu-1{
+	width: 0%;
+	height: 5px;
+	background-color: red;
+}
+.jindu-2{
+	width: 0%;
+	height: 5px;
+	background-color: red;
+}
+.jindu-3{
+	width: 0%;
+	height: 5px;
+	background-color: red;
+}
+.speed-c{
+	width: 48%;
+	height: 26.3vh;
+}
+.speed-c ul{
+	margin-bottom: 100px;
+	width: 100%;
+	height: 50px;
+}
+.jindu-4{
+	width: 0%;
+	height: 5px;
+	background-color: red;
+}
+.jindu-5{
+	width: 0%;
+	height: 5px;
+	background-color: red;
+}
+.jindu-6{
+	width: 0%;
+	height: 5px;
+	background-color: red;
+}
+
+/* 作品集 */
+.gallery-wapr{
+	width: 90%;
+/* 	position: relative;
+	left: 2%;
+	top: 0%;
+	transform: translate(-2%,0%); */
+}
+.inner-width{
+	margin: auto;
+	width: 100%;
+	max-width: 1200px;
+	padding: 50px 20px 0px;
+}
+.gallery-wapr h1{
+	width: 110%;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: "monotype corsiva",sans-serif;
+}
+.border p{
+	width: 110%;
+	padding: 20px 0;
+	text-align: center;
+}
+
+.gallery-wapr .galler{
+	width: 100%;
+	 display: flex;
+	 flex-wrap: wrap-reverse;
+	 justify-content: center;
+	 position: relative;
+	 left: 50%;
+	 top: 0%;
+	 transform: translate(-45%,-0%);
+}
+.gallery-wapr .galler .imges{
+	width: 70%;
+	height: 50%;
+	flex: 35%;
+	overflow: hidden;
+	cursor: pointer;
+}
+.gallery-wapr .galler .imges img{
+	padding: 10px 0;
+	width: 100%;
+	transition: 0.6s;
+}
+.gallery-wapr .galler .imges img:hover{
+	transform: scale(1.1);
+}
+
+/* 联系 */
+.contact{
+	display: flex;
+	width: 100%;
+	height: 100vh;
+	background: url(../image/make.jpg)no-repeat center;
+	background-size: cover;
+	position: relative;
+	left: 50%;
+	top: 0%;
+	transform: translate(-50%,-0%);
+	z-index: -1;
+}
+.contact::after{
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0, .8);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+.cont-wapr{
+	width: 50%;
+	height: 100vh;
+/* 	background-color: #8B4513; */
+}
+.cont-c{
+	width: 100%;
+	height: initial;
+	position: relative;
+	left: 0%;
+	top: 50%;
+	transform: translate(-0%,-50%);
+	z-index: 1;
+}
+.cont-wapr input{
+	text-align: center;
+	outline: none;
+	border: none;
+	/* border-bottom: #000 1px solid; */
+}
+.cont-wapr p{
+	margin-top: 25px;
+}
+.cont-wapr input{
+	background: none;
+	color: #fff;
+	font-size: 25px;
+	font-weight: 500;
+}
+.cont-wapr #sousuo{
+	width: 100%;
+	height: 40px;
+}
+.cont-wapr2{
+	width: 50%;
+	height: 100vh;
+}
+.cont-t{
+	width: 50%;
+	height: intrinsic;
+	overflow: hidden;
+	position: relative;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 1;
+}
+.cont-t img{
+	width: 100%;
+	background-color: #fff;
+}
